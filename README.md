@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @FlaviaPFonseca
-- 👀 I’m interested in developer job;
+- 👀 I’m interested in internship  in development.
 - 🌱 I’m currently learning JavaScript.
 - 💞️ I’m looking to collaborate on JavaScript/Front-End
 - 📫 How to reach me : flapoliane@yahoo.com.br
