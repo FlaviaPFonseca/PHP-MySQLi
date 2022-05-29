@@ -14,7 +14,7 @@ $profissao =$_POST['profissao'];
 
 $sql = "insert into usuarios (nome, email,profissao) values('$nome','$email','$profissao')";
 $salvar =mysqli_query($conexao,$sql);
-
+$linhas= mysqli_affected_rows($conexao);
 
 ?>
 <!DOCTYPE html>
@@ -33,6 +33,16 @@ $salvar =mysqli_query($conexao,$sql);
             </ul>
         </nav>
         <section>
+            <h1>Conformação de Cadastro</h1>
+            <hr> <br><br>
+
+            <?php
+            if($linhas==1){
+                print "Cadastro efetuado com sucesso!"
+            }else{
+                print"Cadastro não efetuado.<br> Ja existe um usuario com este e-mail!";
+            }
+
             <h1> consultas</h1>
             <hr></hr>
             <form method="get" action="">
@@ -48,7 +58,7 @@ $salvar =mysqli_query($conexao,$sql);
             
             print "<br><br>";
 
-            while($exibirRegistros =mysqli_fetch_array($consulta) ){
+            while($exibirRegistros = mysqli_fetch_array($consulta) ){
 
             $codigo = $exibirRegistros[0];
             $nome = $exibirRegistros[1]; 
