@@ -1,11 +1,10 @@
 <?php
 <include_once("_inc/conexao.php");
 
-$sql ="select * from funcionarios";
+$sql ="select * from usuarios";
 $consulta =mysqli_query($conexao,$sql);
+$registros=mysqli_num_rows($consulta);
 $linhas =mysqli_num_rows($consulta);
-
-mysqli_close($conexao);
 
 ?>
 
@@ -20,24 +19,47 @@ mysqli_close($conexao);
             <div class="container">
                 <nav>
                     <ul class="menu">
-                        <a href="index.php"><li>Cad.Funcionários</li></a>
-                        <li>Cad.Funcionários</li>
-                        <li>Cad.Clientes</li>
+                        <a href="index.php">
+                        <li>Cad.Usuarios</li>
                         <li>Cad.Serviços</li>
                         <li>Consultas</li>
                         <li>Sair</li>
                     <</ul>
                 </nav>
+            </div> 
         <section> 
             <h1>Consultas</h1>
-            <hr>
-            <br>
+            <hr><br>
+            <from method="get" action ="">
+                Filtrar por profissão: <input type="text" name="filtro" class="campo" required autofocus>
+                <input type= "submit" value="Pesquisar" class="btn">
+            </from>
             <?php
            
-           print= "$linhas registro(s) encontrado(s)"";
-             
+           print= "$registros registro(s) encontrado(s)";
+
+           print "<br><br>";
+
+           while( $exibirRegistro = mysqli_fetch_array($consulta)){
+            
+            $codigo = $exibirRegistros[0];
+            $nome = $exibirRegistros[1]; 
+            $email = $exibirRegistros[2];
+            $profissão = $exibirRegistros[3];
+
+            print"<article>";
+           
+            print "$codigo<br>";
+            print "$nome<br>";
+            print "$email<br>";
+            print "$profissão";
+
+
+            print"</article>"
+           }
+           mysqli_close($conexao);
            ?>
 
         </section>   
-        </div>         
+                
         </body>

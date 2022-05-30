@@ -75,5 +75,10 @@ $linhas= mysqli_affected_rows($conexao);
             print "</article>";
             }
             mysqli_close($conexao);
-
             ?>
+
+            </section>
+           </div> 
+           </body>
+           </html>
+            
