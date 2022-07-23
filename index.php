@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,7 +29,7 @@
                 Email <br>
                 <input type="email" name="email" class="campo" maxlength="50" required><br>
                 Profissão<br>
-                <input type="text" name="Profissão" class="campo" maxlength="40" required ><br>
+                <input type="text" name="profissao" class="campo" maxlength="40" required ><br>
             </form>
         </section>
     </div>
