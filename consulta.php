@@ -25,11 +25,11 @@ $registros=mysqli_num_rows($consulta);
         <nav>
             <ul class="menu">
                <a href="index.php"> <li>Cadastro</li></a>
-               <a href="consultas.php"><li>Consulta</li></a> 
+               <a href="consulta.php"><li>Consulta</li></a> 
             </ul>
         </nav>
         <section>
-            <h1> Consultas</h1>
+            <h1> Consulta</h1>
             <hr><br><br>
          <form method = "get" action="">
          Filtrar por profissão : <input type="text" name="filtro" class="campo" required autofocus>

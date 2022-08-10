@@ -2,9 +2,9 @@
 
 include_once("conexao.php");
 
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$profissão = $_POST['profissão'];
+$nome = $_GET['nome'];
+$email = $_GET['email'];
+$profissão = $_GET['profissão'];
 
 $sql = "insert into usuarios (nome, email,profissão) values('$nome','$email','$profissão')";
 $salvar = mysqli_query($conexao,$sql);
@@ -28,7 +28,7 @@ mysqli_close($conexao);
         <nav>
             <ul class="menu">
                <a href="index.php"> <li>Cadastro</li></a>
-               <a href="consultas.php"><li>Consulta</li></a> 
+               <a href="consulta.php"><li>Consulta</li></a> 
             </ul>
         </nav>
         <section>

@@ -13,7 +13,7 @@
         <nav>
             <ul class="menu">
                <a href="index.php"> <li>Cadastro</li></a>
-               <a href="consultas.php"><li>Consulta</li></a> 
+               <a href="consulta.php"><li>Consulta</li></a> 
             </ul>
         </nav>
         <section>
